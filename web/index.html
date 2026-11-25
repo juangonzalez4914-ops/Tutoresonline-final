@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Aprende — Encuentra tu tutor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12V20H5.5C4.7 20 4 19.3 4 18.5V5.5Z" fill="#fff"/><path d="M12 4H18.5C19.3 4 20 4.7 20 5.5V18.5C20 19.3 19.3 20 18.5 20H12V4Z" fill="#fff" fill-opacity=".55"/></svg>
+      </div>
+      <div class="brand-name">Aprende</div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-nav="explorar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        Explorar
+      </button>
+      <button class="nav-item" data-nav="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+        Mi aprendizaje
+      </button>
+      <button class="nav-item" data-nav="portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        Portal del tutor
+      </button>
+      <button class="nav-item" data-nav="vivo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+        En vivo
+      </button>
+    </nav>
+
+    <div class="sidebar-spacer"></div>
+
+    <div class="sidebar-user">
+      <img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=100&h=100&fit=crop&crop=faces" alt="">
+      <div class="who">
+        <span class="name">Sofía King</span>
+        <span class="role">Estudiante · 120 XP</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+
+    <!-- ---------- EXPLORAR ---------- -->
+    <section class="view active" id="view-explorar">
+      <div class="page-head">
+        <h1>¿Qué te gustaría aprender hoy?</h1>
+        <p>Encuentra tutores verificados y agenda una sesión en minutos.</p>
+      </div>
+
+      <div class="search-row">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" placeholder="Busca por materia, tema o nombre del tutor">
+        </div>
+      </div>
+      <div class="filters">
+        <button class="chip active">Matemáticas</button>
+        <button class="chip">Física</button>
+        <button class="chip">Inglés</button>
+        <button class="chip">Menos de $40.000/h</button>
+        <button class="chip">Disponible hoy</button>
+      </div>
+
+      <div class="section-title">
+        <h2>Tutores destacados</h2>
+        <span>4 resultados</span>
+      </div>
+      <div class="tutor-grid">
+        <button class="tutor-card" data-open-profile>
+          <div class="tutor-top">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&crop=faces" alt="">
+            <div>
+              <div class="tname">Profa. Elena Ramos</div>
+              <div class="tsubject">Cálculo &amp; Álgebra</div>
+            </div>
+          </div>
+          <p class="tutor-blurb">8 años enseñando a nivel preparatoria y universitario, especializada en llevar el cálculo a lo concreto.</p>
+          <div class="tutor-meta">
+            <span class="rating"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>4.9</span>
+            <span class="price">$24.000/h</span>
+          </div>
+        </button>
+
+        <button class="tutor-card">
+          <div class="tutor-top">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=faces" alt="">
+            <div>
+              <div class="tname">Dr. Carlos Méndez</div>
+              <div class="tsubject">Física Cuántica</div>
+            </div>
+          </div>
+          <p class="tutor-blurb">PhD en física teórica. Convierte conceptos abstractos en modelos visuales fáciles de retener.</p>
+          <div class="tutor-meta">
+            <span class="rating"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>5.0</span>
+            <span class="price">$30.000/h</span>
+          </div>
+        </button>
+
+        <button class="tutor-card">
+          <div class="tutor-top">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&crop=faces" alt="">
+            <div>
+              <div class="tname">Mateo Ortiz</div>
+              <div class="tsubject">Química Orgánica</div>
+            </div>
+          </div>
+          <p class="tutor-blurb">Ex-olímpico de química, listo para ayudarte a dominar mecanismos de reacción paso a paso.</p>
+          <div class="tutor-meta">
+            <span class="rating"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>4.9</span>
+            <span class="price">$22.000/h</span>
+          </div>
+        </button>
+      </div>
+
+      <div class="section-title">
+        <h2>Recomendados para ti</h2>
+        <span>Según tus clases anteriores</span>
+      </div>
+      <div class="rec-list">
+        <button class="rec-row">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces" alt="">
+          <div>
+            <div class="rec-name">Sofia King</div>
+            <span class="tag">Inglés avanzado</span>
+            <div class="rec-blurb">Clases dinámicas y 100% conversacionales.</div>
+          </div>
+          <span class="rating"><svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--gold);width:14px;height:14px;"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>4.8</span>
+          <span class="rec-price">$18.000/h</span>
+        </button>
+        <button class="rec-row">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" alt="">
+          <div>
+            <div class="rec-name">Mateo Ortiz</div>
+            <span class="tag">Química orgánica</span>
+            <div class="rec-blurb">Ex-olímpico de química listo para ayudarte.</div>
+          </div>
+          <span class="rating"><svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--gold);width:14px;height:14px;"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>4.9</span>
+          <span class="rec-price">$22.000/h</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ---------- PERFIL DE TUTOR + RESERVA ---------- -->
+    <section class="view" id="view-perfil">
+      <button class="back-link" data-nav="explorar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Volver a explorar
+      </button>
+
+      <div class="profile-layout">
+        <div>
+          <div class="profile-hero">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=faces" alt="">
+            <div>
+              <h1>Profa. Elena Ramos <span class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></h1>
+              <div class="subline">
+                <span class="rating"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>4.9 (142 reseñas)</span>
+                <span>$24.000 / hora</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-block">
+            <h3>Sobre mí</h3>
+            <p>Apasionada de las matemáticas con más de 8 años enseñando a nivel preparatoria y universitario. Mi meta es que dejes de temerle a los números y comiences a entenderlos.</p>
+          </div>
+
+          <div class="card-block">
+            <h3>Especialidades</h3>
+            <div class="pill-row">
+              <span class="pill">Cálculo</span>
+              <span class="pill">Física moderna</span>
+              <span class="pill">Álgebra lineal</span>
+              <span class="pill">Trigonometría</span>
+            </div>
+          </div>
+
+          <div class="card-block">
+            <h3>Calendario de disponibilidad</h3>
+            <div class="avail-grid">
+              <div class="avail-day open"><div class="dow">Lun</div><div class="num">15</div><div class="dot"></div></div>
+              <div class="avail-day"><div class="dow">Mar</div><div class="num">16</div><div class="dot"></div></div>
+              <div class="avail-day open"><div class="dow">Mié</div><div class="num">17</div><div class="dot"></div></div>
+              <div class="avail-day open"><div class="dow">Jue</div><div class="num">18</div><div class="dot"></div></div>
+              <div class="avail-day"><div class="dow">Vie</div><div class="num">19</div><div class="dot"></div></div>
+              <div class="avail-day"><div class="dow">Sáb</div><div class="num">20</div><div class="dot"></div></div>
+              <div class="avail-day open"><div class="dow">Dom</div><div class="num">21</div><div class="dot"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking panel -->
+        <div class="booking-panel">
+          <h3>Reserva tu sesión</h3>
+
+          <div class="field-label">Selecciona fecha</div>
+          <div class="date-row">
+            <button class="opt-btn date-opt selected" data-group="date"><span class="dow">Mié</span><span class="dd">17</span></button>
+            <button class="opt-btn date-opt" data-group="date"><span class="dow">Jue</span><span class="dd">18</span></button>
+            <button class="opt-btn date-opt" data-group="date"><span class="dow">Vie</span><span class="dd">19</span></button>
+            <button class="opt-btn date-opt" data-group="date"><span class="dow">Sáb</span><span class="dd">20</span></button>
+          </div>
+
+          <div class="field-label">Horas disponibles</div>
+          <div class="hour-grid">
+            <button class="opt-btn" data-group="hour">09:00</button>
+            <button class="opt-btn selected" data-group="hour">10:30</button>
+            <button class="opt-btn" data-group="hour">14:00</button>
+            <button class="opt-btn" data-group="hour">15:30</button>
+            <button class="opt-btn" data-group="hour">17:00</button>
+            <button class="opt-btn" data-group="hour">18:30</button>
+          </div>
+
+          <div class="field-label">Duración</div>
+          <div class="dur-row">
+            <button class="opt-btn" data-group="dur" data-price="12000">30 min</button>
+            <button class="opt-btn selected" data-group="dur" data-price="24000">60 min</button>
+            <button class="opt-btn" data-group="dur" data-price="36000">90 min</button>
+          </div>
+
+          <div class="field-label">Modalidad</div>
+          <div class="modal-row">
+            <button class="opt-btn selected" data-group="modal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+              Virtual
+            </button>
+            <button class="opt-btn" data-group="modal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Presencial
+            </button>
+          </div>
+
+          <div class="price-box">
+            <div class="price-line"><span>Cálculo (1 hora)</span><span id="price-base">$24.000</span></div>
+            <div class="price-line"><span>Cargo de servicio</span><span>$2.000</span></div>
+            <div class="price-line total"><span>Total a pagar</span><b id="price-total">$26.000</b></div>
+          </div>
+
+          <button class="btn-primary" id="confirm-booking">Confirmar reserva</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- MI APRENDIZAJE ---------- -->
+    <section class="view" id="view-dashboard">
+      <div class="dash-head">
+        <div>
+          <h1 style="font-size:28px;margin:0 0 4px;">¡Hola de nuevo, Sofía!</h1>
+          <p style="margin:0;color:var(--muted);font-size:15px;">Esto es lo que sigue en tu semana.</p>
+        </div>
+        <span class="xp-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          120 XP
+        </span>
+      </div>
+
+      <div class="filters" style="margin-top:24px;">
+        <button class="chip active">Matemáticas</button>
+        <button class="chip">Física</button>
+        <button class="chip">Química</button>
+      </div>
+
+      <div class="section-title"><h2>Próxima clase</h2></div>
+      <div class="next-class">
+        <div class="next-class-info">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&crop=faces" alt="">
+          <div>
+            <div class="lbl">Cálculo</div>
+            <div class="who">Profa. Elena Ramos</div>
+            <div class="meta">Hoy, 15:30 &nbsp;·&nbsp; <span class="badge-virtual">Virtual</span></div>
+          </div>
+        </div>
+        <button class="btn-join" data-nav="vivo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+          Unirse al aula virtual
+        </button>
+      </div>
+
+      <div class="section-title"><h2>Clases anteriores</h2></div>
+      <div class="card-block" style="padding:8px 20px;">
+        <div class="history-row">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces" alt="">
+          <div>
+            <div class="rec-name">Sofia King</div>
+            <div class="rec-blurb">Conversación en inglés · Ayer, 10:00</div>
+          </div>
+          <div></div>
+          <button class="btn-ghost">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            Calificar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- PORTAL DEL TUTOR ---------- -->
+    <section class="view" id="view-portal">
+      <div class="dash-head">
+        <div>
+          <p style="margin:0;color:var(--muted);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;">Portal del tutor</p>
+          <h1 style="font-size:28px;margin:2px 0 0;">Elena Ramos</h1>
+        </div>
+        <span class="xp-badge" style="background:var(--primary-wash);color:var(--primary-dark);">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6z"/></svg>
+          4.9 / 5.0
+        </span>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="lbl">Esta semana</div>
+          <div class="val">$140.000</div>
+        </div>
+        <div class="stat-card" style="background:linear-gradient(135deg,var(--coral),var(--coral-dark));">
+          <div class="lbl">Este mes</div>
+          <div class="val">$620.000</div>
+        </div>
+      </div>
+
+      <div class="section-title"><h2>Solicitudes pendientes</h2></div>
+      <div class="req-card">
+        <div class="req-info">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces" alt="">
+          <div>
+            <div class="n">Mateo Torres</div>
+            <div class="m">Álgebra · Mañana, 16:00 (1 h)</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;">
+          <span class="req-price">$20.000</span>
+          <div class="req-actions">
+            <button class="btn-accept">Aceptar</button>
+            <button class="btn-reject">Rechazar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title"><h2>Gestión de turnos · Hoy</h2></div>
+      <div class="turno-table">
+        <div class="turno-row">
+          <div class="turno-time">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            15:30 – 16:30
+          </div>
+          <span class="turno-who">Sofía King</span>
+          <button class="switch on"></button>
+        </div>
+        <div class="turno-row">
+          <div class="turno-time">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            17:00 – 18:00
+          </div>
+          <span class="turno-who free">Disponible</span>
+          <button class="switch on free"></button>
+        </div>
+        <div class="turno-row">
+          <div class="turno-time">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            18:30 – 19:30
+          </div>
+          <span class="turno-who">Lucas V.</span>
+          <button class="switch on"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- EN VIVO ---------- -->
+    <section class="view" id="view-vivo">
+      <div class="page-head">
+        <h1 style="font-size:26px;">Sesión en vivo</h1>
+        <p>Cálculo con Profa. Elena Ramos</p>
+      </div>
+
+      <div class="live-layout" style="margin-top:22px;">
+        <div>
+          <div class="video-stage">
+            <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=900&h=560&fit=crop&crop=faces" alt="">
+            <span class="video-tag"><span class="rec"></span>42:15</span>
+            <span class="video-subject">Cálculo</span>
+            <div class="pip">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=160&fit=crop&crop=faces" alt="">
+            </div>
+          </div>
+          <div class="live-controls">
+            <button class="ctrl-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><path d="M12 18v4"/></svg></button>
+            <button class="ctrl-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg></button>
+            <button class="btn-end">Finalizar sesión</button>
+          </div>
+        </div>
+
+        <div class="whiteboard">
+          <div class="wb-head">
+            <span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4z"/></svg>Pizarra compartida</span>
+            <span class="editing">Sofía está editando…</span>
+          </div>
+          <div class="wb-canvas">
+            <svg viewBox="0 0 300 150"><line x1="60" y1="130" x2="240" y2="30" stroke="var(--primary)" stroke-width="3" stroke-linecap="round"/></svg>
+            <span class="fn">f(x) = x² + 2</span>
+          </div>
+          <div class="chat-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Mensaje de Elena: "Intenta resolver…"
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // ---- View navigation ----
+  function showView(id){
+    document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+    document.getElementById('view-'+id).classList.add('active');
+    document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+    document.querySelectorAll('.nav-item[data-nav="'+id+'"]').forEach(n=>n.classList.add('active'));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  document.querySelectorAll('[data-nav]').forEach(el=>{
+    el.addEventListener('click', ()=> showView(el.getAttribute('data-nav')) );
+  });
+  document.querySelectorAll('[data-open-profile]').forEach(el=>{
+    el.addEventListener('click', ()=> showView('perfil') );
+  });
+
+  // ---- Filter chips ----
+  document.querySelectorAll('.filters').forEach(group=>{
+    group.querySelectorAll('.chip').forEach(chip=>{
+      chip.addEventListener('click', ()=>{
+        group.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+        chip.classList.add('active');
+      });
+    });
+  });
+
+  // ---- Booking option groups ----
+  document.querySelectorAll('[data-group]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const group = btn.getAttribute('data-group');
+      document.querySelectorAll('[data-group="'+group+'"]').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      updatePrice();
+    });
+  });
+
+  function updatePrice(){
+    const durBtn = document.querySelector('[data-group="dur"].selected');
+    const base = durBtn ? parseInt(durBtn.getAttribute('data-price')) : 24000;
+    const service = 2000;
+    const fmt = n => '$' + n.toLocaleString('es-CO');
+    document.getElementById('price-base').textContent = fmt(base);
+    document.getElementById('price-total').textContent = fmt(base+service);
+  }
+
+  // ---- Confirm booking ----
+  document.getElementById('confirm-booking').addEventListener('click', ()=>{
+    const btn = document.getElementById('confirm-booking');
+    btn.textContent = '¡Reserva confirmada!';
+    btn.style.background = 'var(--green)';
+    setTimeout(()=>{ showView('dashboard'); btn.textContent='Confirmar reserva'; btn.style.background=''; }, 900);
+  });
+</script>
+</body>
+</html>
